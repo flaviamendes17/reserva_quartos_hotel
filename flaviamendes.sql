@@ -46,3 +46,8 @@ INSERT INTO reservas (id_hospede, id_quarto, data_entrada, data_saida) VALUES
 (4, 4, '2024-12-25', '2024-12-30'),
 (5, 5, '2025-03-03', '2025-03-05');
 
+SELECT * FROM hospedes;
+SELECT * FROM quartos;
+SELECT * FROM reservas;
+
+
