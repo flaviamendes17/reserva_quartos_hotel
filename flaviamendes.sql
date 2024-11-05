@@ -50,4 +50,19 @@ SELECT * FROM hospedes;
 SELECT * FROM quartos;
 SELECT * FROM reservas;
 
+SELECT 
+    h.nome AS hospede,
+    q.numero_quarto AS quarto,
+    r.data_entrada,
+    r.data_saida
+FROM
+    hospedes h
+JOIN 
+    reservas r ON h.id_hospede = r.id_hospede
+JOIN 
+    quartos q ON r.id_quarto = q.id_quarto
+WHERE
+    r.data_entrada BETWEEN '2024-12-30' AND '2025-01-02'; 
+
+
 
