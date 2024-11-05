@@ -24,3 +24,25 @@ CREATE TABLE reservas (
     FOREIGN KEY (id_hospede) REFERENCES hospedes(id_hospede),
     FOREIGN KEY (id_quarto) REFERENCES quartos(id_quarto)
 ); 
+
+INSERT INTO hospedes (nome, idade, email) VALUES
+('Amanda', 25, 'amandinha@gmail.com'),
+('Giovanna', 30, 'gigica@gmail.com'),
+('Julia', 22, 'jujuba@gmail.com'),
+('Kevin', 28, 'menorp@gmail.com'),
+('Ana Julia', 19, 'naju@gmail.com');
+
+INSERT INTO quartos (numero_quarto, disponivel) VALUES
+(101, TRUE),
+(102, TRUE),
+(103, TRUE),
+(104, FALSE),
+(105, TRUE);
+
+INSERT INTO reservas (id_hospede, id_quarto, data_entrada, data_saida) VALUES
+(1, 1, '2024-11-09', '2024-11-11'),
+(2, 2, '2024-09-05', '2024-09-09'),
+(3, 3, '2024-12-30', '2025-01-02'),
+(4, 4, '2024-12-25', '2024-12-30'),
+(5, 5, '2025-03-03', '2025-03-05');
+
