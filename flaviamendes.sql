@@ -79,4 +79,14 @@ INSERT INTO reservas (id_hospede, id_quarto, data_entrada, data_saida) VALUES
 
 ALTER TABLE quartos ALTER COLUMN disponivel DROP NOT NULL;
 
-
+SELECT
+    q.numero_quarto AS quarto,
+    q.quarto_disponivel AS disponivel;
+FROM
+    quartos q
+JOIN
+    reservas r ON q.id_quarto = r.id_quarto
+JOIN
+    reservas r ON q.id_quarto = r.id_quarto
+WHERE
+    r.id_reserva IS NULL;
