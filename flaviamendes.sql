@@ -65,4 +65,18 @@ WHERE
     r.data_entrada BETWEEN '2024-12-30' AND '2025-01-02'; 
 
 
+INSERT INTO hospedes (nome, idade, email) VALUES
+('Thiago', 25, 'thiago@gmail.com'),
+('Felipe', 32, 'felipe@gmail.com'),
+
+INSERT INTO quartos (numero_quarto, disponivel) VALUES
+(106, NULL),
+(107, NULL),
+
+INSERT INTO reservas (id_hospede, id_quarto, data_entrada, data_saida) VALUES
+(6, 6, '2024-11-05', '2024-11-05'),
+(7, 7, '2024-09-05', '2024-09-05');
+
+ALTER TABLE quartos ALTER COLUMN disponivel DROP NOT NULL;
+
 
